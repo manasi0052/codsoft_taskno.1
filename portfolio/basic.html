@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="file.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="imagess/logo..png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+        <p>Full Stack Web Developer</p>
+        <h1>Hi, I'm Mansi Pisal</h1>
+        </div>      
+    </div>
+</div>
+<!------------about--------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="imagess/image.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>"Hello! I'm Mansi Pisal, a third-year computer science and engineering student with a passion for innovative technology solutions. </p>
+            <div class="tabtitles">
+                <p class="tabs active" onclick="opentab('skills')">Skills</p>
+                <p class="tabs" onclick="opentab('languages')">Languages</p>
+                <p class="tabs"onclick="opentab('education')" >Education</p>
+            </div> 
+            <div class="tabcontents actiontab" id="skills">
+                <ul>
+                    <li><span>Web Development</span><br>Web app Development</li>
+                    <li><span>Soft Skills</span><br>Problem Solving and analytical thinking</li>
+                </ul>
+            </div>     
+            <div class="tabcontents" id="languages">
+                <ul>
+                    <li><span>Java Programming</span></li>
+                    <li><span>Python Programming</span> </li>
+                    <li><span>C Programming</span></li>
+                </ul>
+            </div> 
+            <div class="tabcontents" id="education">
+                <ul>
+                    <li><span>Bachelor of Technology in Computer Science and Engineering, 2026(Expected)</span></li>
+                    <li><br><span>Relevant coursework</span><br>Data Structure and Algorithms</li>
+                    <li>Computer Systems and Organization</li>
+                    <li><br><span>Certifications/Courses</span><br>Networking Technology(2023)</li>
+                    <li>Python Programming(2024)</li>
+                </ul>
+            </div> 
+            </div>     
+        </div>
+    </div>
+</div>
+
+<section id="project">
+    <h1>Project</h1>
+    <div class="project">
+        <img src="imagess/project.JPG" alt="Project Title">
+        <div class="project-info">
+            <h3>Pet Food Website</h3>
+            <p>I had created the Pet Food Shop website as my Web Development Project in 2nd year of CSE</p>
+            <a href="" class="btn3">View Project</a>
+        </div>
+    </div>
+</section>
+
+
+<div id="resume">
+    <div class="container">
+    <h1>Resume</h1>
+     <a href="" class="btn2">Download CV</a>
+    </div>
+</div>
+
+<div id="contact">
+    <div id="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i>coder@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>80504-80504</p>
+                <div class="socialicons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+
+        var tabs = document.getElementsByClassName("tabs");
+        var tabcontents = document.getElementsByClassName("tabcontents");
+
+        function opentab(tabname){
+            for(tab of tabs){
+                tab.classList.remove("active");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("actiontab");
+            }
+            event.currentTarget.classList.add("active")
+            document.getElementById(tabname).classList.add("actiontab")
+        }
+
+    </script>
+</body>
+</html>
